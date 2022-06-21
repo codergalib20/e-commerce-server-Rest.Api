@@ -20,6 +20,9 @@ mongoose
   .catch((error) => console.log(error));
 
 // Here is connect all root routes
+app.get("/", (req, res)=>{
+  res.send("Application running!")
+})
 app.use("/api/user", auth);
 app.use("/api/product", products);
 
